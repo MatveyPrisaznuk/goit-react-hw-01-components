@@ -1,13 +1,17 @@
+import style from "./Statistics.module.css"
+
+const colors = ["#ADD8E6", "#e09be8", "tomato", "turquoise", "green"];
+
 function Statistics({ title, stats }) {
   return (
-    <section className="statistics">
-      <h2 className="title">{title ? title : "Upload stats"}</h2>
+    <section className={style.statistics}>
+      <h2 className={style.title}>{title ? title : "Upload stats"}</h2>
 
-      <ul className="stat-list">
-        {stats.map(({ id, label, percentage }) => (
-          <li className="item" key={id}>
-            <span className="label">{label}</span>
-            <span className="percentage">{percentage}%</span>
+      <ul className={style.statList}>
+        {stats.map(({ id, label, percentage }, index) => (
+          <li className={style.item} key={id} style={{ backgroundColor: colors[index] }}>
+            <span className={style.label}>{label}</span>
+            <span className={style.percentage}>{percentage}%</span>
           </li>
         ))}
       </ul>

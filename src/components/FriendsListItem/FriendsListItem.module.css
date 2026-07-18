@@ -1,0 +1,28 @@
+.item {
+  display: flex;
+  align-items: center;
+  border-radius: 0px;
+  box-shadow: 1px 1px 4px black;
+  width: 200px;
+  gap: 5px;
+}
+
+.status {
+    border-radius: 20px;
+    width: 10px;
+    height: 10px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+.active {
+  background-color: green;
+}
+
+.notactive {
+  background-color: red;
+}
+
+.name {
+    color: black;
+}
